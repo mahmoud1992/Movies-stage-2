@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Movies</string>
+
+    <string name="top_rated">Top Rated Movies</string>
+    <string name="sort_settings">Sort Movies</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="dialog_title">Select sorting type</string>
+
+
+    <string name="most_popular_setting">Most Popular</string>
+    <string name="top_rated_setting">Top Rated</string>
+    <string name="favorites_setting">Favorite Movies</string>
+</resources>
