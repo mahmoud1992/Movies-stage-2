@@ -74,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
         }
         // Check if online
         if (isOnline ()) {
-            //Default to Popular Query Sort
             if (selectedItem == R.id.popular_setting) {
                 new FetchDataAsyncTask ().execute(Constants.POPULAR_QUERY_PARAM);
             }
@@ -253,5 +252,63 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
 
+    //    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.menu_main, menu);
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        int id = item.getItemId();
+//
+//        //handle click on sort settings
+//
+//        if (id == R.id.action_sort_settings) {
+//            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//            final SharedPreferences.Editor editor=sharedPreferences.edit();
+//            int selected = 0;
+//            sort_type = sharedPreferences.getString("sort_type", "popular");
+//            if(sort_type.equals("popular"))
+//                selected = 0;
+//            else if(sort_type.equals("top_rated"))
+//                selected = 1;
+//            builder.setTitle(R.string.dialog_title);
+//            builder.setSingleChoiceItems(R.array.sort_types, selected,
+//                    new DialogInterface.OnClickListener() {
+//                        @Override
+//                        public void onClick(DialogInterface dialog, int which) {
+//                            if (which == 0)
+//                                editor.putString("sort_type", "popular");
+//                            else if (which == 1)
+//                                editor.putString("sort_type", "top_rated");
+//                        }
+//                    });
+//            builder.setPositiveButton(R.string.save, new DialogInterface.OnClickListener() {
+//                public void onClick(DialogInterface dialog, int id) {
+//                    //user clicked save
+//                    editor.commit();
+//                }
+//            });
+//            builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+//                public void onClick(DialogInterface dialog, int id) {
+//                    //user clicked cancel
+//                }
+//            });
+//            builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
+//                @Override
+//                public void onDismiss(DialogInterface dialog) {
+//                    //refresh activity
+//                    Intent intent = new Intent(MainActivity.this, MainActivity.class);
+//                    intent.setFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+//                    startActivity(intent);
+//                }
+//            });
+//            AlertDialog dialog = builder.create();
+//            dialog.show();
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
+//
 
 }
